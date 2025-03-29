@@ -1,0 +1,28 @@
+import pygame,time
+
+pygame.init()
+display=pygame.display.set_mode((600,600))
+pygame.display.set_caption("Merry Christmas BOB")
+bg=pygame.image.load("chrismas_bg.jpg")
+bg=pygame.transform.scale(bg, (600,600))
+element1=pygame.image.load("chrismas_element1.png")
+element2=pygame.image.load("chrismas_element2.png")
+while True:
+    font=pygame.font.SysFont("Abril Fatface", 72)
+    text1=font.render("Merry", True,"red")
+    text2=font.render("Chrismas", False,"green")
+    display.fill("white")
+    display.blit(bg, (0,0))
+    display.blit(text1, (10,10))
+    display.blit(text2, (150,10))
+    pygame.display.update()
+    time.sleep(2)
+
+    display.blit(bg, (0,0))
+    display.blit(element1, (300,300))
+    pygame.display.update()
+    time.sleep(2)
+    display.blit(bg, (0,0))
+    display.blit(element2, (100,300))
+    pygame.display.update()
+    time.sleep(2)
